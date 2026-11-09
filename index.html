@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free At Last? | November 20, 2026 at St. Peter’s</title>
+<meta name="description" content="Free At Last? The Evolution of the American Spiritual. Narration by Dr. Johnnetta Betsch Cole with Ritz Chamber Players. Friday, November 20, 2026, 7:00 p.m., St. Peter’s Episcopal Church, Fernandina Beach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Layout: a split hero (mark on paper, Dr. Cole on stage), a row of faces, then editorial sections that pair text with photographs; night bands and a full-bleed gallery set the rhythm; the program is set like a printed concert program. */
+:root {
+  --paper: #FBF7EF;
+  --paper-2: #F2EADB;
+  --ink: #1C1917;
+  --ink-soft: #5A524A;
+  --rule: #D8CDBB;
+  --night: #15120F;
+  --night-2: #221D18;
+  --night-ink: #F6F0E4;
+  --night-soft: #BDB3A2;
+  --sun: #F6C915;
+  --crimson: #B0141F;
+  --font-display: "Bodoni Moda", "Bodoni 72", Didot, "Didot LT STD", Georgia, serif;
+  --font-body: "EB Garamond", Garamond, "Adobe Garamond Pro", "Times New Roman", serif;
+  --font-label: "Jost", Futura, "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  --gutter-x: clamp(16px, 5vw, 56px);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: clamp(18px, 1.05rem + 0.25vw, 20px);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--crimson);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.night a:focus-visible, .night summary:focus-visible { outline-color: var(--sun); }
+
+/* ---------- shared structure ---------- */
+.wrap {
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-left: max(var(--gutter-x), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter-x), env(safe-area-inset-right, 0px));
+}
+.band { padding-block: clamp(64px, 9vw, 120px); }
+.paper { background: var(--paper); color: var(--ink); }
+.paper-2 { background: var(--paper-2); color: var(--ink); }
+.night { background: var(--night); color: var(--night-ink); }
+
+.label {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin: 0;
+}
+.night .label { color: var(--sun); }
+
+h2, h3 { font-family: var(--font-display); font-weight: 500; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.6rem); line-height: 1.06; letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.45rem, 1.2rem + 0.8vw, 1.9rem); line-height: 1.15; }
+p { margin: 0; }
+.prose { display: grid; gap: 1.05em; max-width: 62ch; }
+.prose p { text-wrap: pretty; }
+.lede { font-size: 1.18em; line-height: 1.5; }
+em, i { font-style: italic; }
+
+.sec-head { display: grid; gap: 1.1rem; margin-bottom: clamp(2.25rem, 4.5vw, 3.5rem); }
+.sec-head .label { display: flex; align-items: center; gap: 1.1rem; }
+.sec-head .label::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.4; }
+.sec-head h2 { max-width: 20ch; }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(2.25rem, 5.5vw, 5rem);
+  align-items: start;
+}
+.split > * { min-width: 0; }
+.stack { display: grid; gap: 1.9rem; align-content: start; }
+@media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- photographs ---------- */
+.photo { margin: 0; display: grid; gap: 0.7rem; }
+.photo img { width: 100%; height: auto; object-fit: cover; background: var(--paper-2); }
+.photo figcaption, .caption {
+  font-family: var(--font-label);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.night .caption { color: var(--night-soft); }
+.photo.framed img { box-shadow: clamp(10px, 1.3vw, 18px) clamp(10px, 1.3vw, 18px) 0 var(--sun); }
+.photo.framed figcaption { margin-top: clamp(10px, 1.3vw, 18px); }
+
+/* ---------- buttons ---------- */
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  min-height: 3.1rem;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.btn-solid { background: var(--ink); color: var(--paper); }
+.btn-solid:hover { background: var(--crimson); border-color: var(--crimson); }
+.btn-line { background: transparent; color: var(--ink); }
+.btn-line:hover { background: var(--ink); color: var(--paper); }
+.night .btn-solid { background: var(--sun); color: var(--night); border-color: var(--sun); }
+.night .btn-solid:hover { background: var(--night-ink); border-color: var(--night-ink); }
+.night .btn-line { color: var(--night-ink); border-color: var(--night-soft); }
+.night .btn-line:hover { background: var(--night-ink); color: var(--night); border-color: var(--night-ink); }
+.btn .arrow { font-family: var(--font-body); font-size: 1.1em; letter-spacing: 0; line-height: 1; }
+
+/* ---------- top bar ---------- */
+.topbar { background: var(--night); color: var(--night-ink); position: relative; z-index: 2; }
+.topbar .wrap {
+  max-width: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-block: 0.7rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.topbar .org { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; align-items: baseline; }
+.topbar .org strong { font-weight: 600; }
+.topbar .org span { color: var(--night-soft); }
+.topbar nav { display: flex; gap: 1.4rem; align-items: center; }
+.topbar nav a { text-decoration: none; color: var(--night-soft); }
+.topbar nav a:hover { color: var(--night-ink); }
+.topbar nav a.reserve { color: var(--night); background: var(--sun); padding: 0.5rem 0.9rem; }
+.topbar nav a.reserve:hover { background: var(--night-ink); }
+@media (max-width: 980px) { .topbar nav a:not(.reserve) { display: none; } }
+@media (max-width: 520px) { .topbar .org span { display: none; } }
+
+/* ---------- hero ---------- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  min-height: min(calc(100vh - 40px), 1000px);
+}
+.hero-copy {
+  display: grid; justify-items: center; align-content: center; gap: 1.5rem;
+  text-align: center;
+  padding-block: clamp(40px, 6vw, 80px);
+  padding-left: max(var(--gutter-x), env(safe-area-inset-left, 0px));
+  padding-right: var(--gutter-x);
+}
+.hero .presenter {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero .presenter::before, .hero .presenter::after {
+  content: ""; width: clamp(20px, 4vw, 56px); height: 1px; background: var(--rule);
+}
+.hero h1 { margin: 0; width: min(560px, 100%); }
+.hero h1 img { width: 100%; }
+.hero .campaign {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
+  line-height: 1.2;
+}
+.hero .when {
+  display: grid; gap: 0.35rem; justify-items: center;
+  padding-block: 1.1rem;
+  border-block: 1px solid var(--rule);
+  width: min(36rem, 100%);
+}
+.hero .date {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.hero .date .time { color: var(--crimson); white-space: nowrap; }
+.hero .venue { color: var(--ink-soft); line-height: 1.4; text-wrap: balance; }
+.hero .ctas { justify-content: center; }
+.hero .fine { font-size: 0.9em; color: var(--ink-soft); max-width: 44ch; line-height: 1.45; }
+.hero-photo { position: relative; margin: 0; background: var(--night); overflow: hidden; }
+.hero-photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 40% 30%;
+}
+.hero-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 4rem 1.4rem 1.1rem;
+  padding-right: max(1.4rem, env(safe-area-inset-right, 0px));
+  background: linear-gradient(to top, rgba(21, 18, 15, 0.85), rgba(21, 18, 15, 0));
+  color: var(--night-ink);
+  font-family: var(--font-label); font-size: 0.66rem; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .hero-copy { padding-right: max(var(--gutter-x), env(safe-area-inset-right, 0px)); }
+  .hero-photo { aspect-ratio: 4 / 5; max-height: 86vh; }
+}
+
+/* ---------- cast ---------- */
+.cast { padding-block: clamp(44px, 6vw, 72px); }
+.cast .wrap { display: grid; gap: 1.8rem; justify-items: center; }
+.cast .label { display: flex; align-items: center; gap: 1rem; }
+.cast .label::before, .cast .label::after { content: ""; width: clamp(24px, 6vw, 64px); height: 1px; background: currentColor; opacity: 0.4; }
+.cast-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: clamp(1.4rem, 3vw, 2.5rem) clamp(0.6rem, 3vw, 2.75rem);
+  width: 100%;
+}
+.cast-list li { flex: 0 1 clamp(6.2rem, 17vw, 10rem); min-width: 0; }
+.cast-list a { display: grid; justify-items: center; gap: 0.3rem; text-align: center; text-decoration: none; }
+.cast-list img {
+  width: clamp(84px, 11vw, 136px); aspect-ratio: 1; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 0 0 3px var(--paper-2), 0 0 0 4px var(--crimson);
+  margin-bottom: 0.65rem;
+  transition: transform 220ms ease;
+}
+.cast-list a:hover img { transform: translateY(-3px); }
+.cast-name { font-family: var(--font-display); font-size: clamp(0.98rem, 0.9rem + 0.3vw, 1.15rem); line-height: 1.2; text-wrap: balance; }
+.cast-role { font-family: var(--font-label); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson); }
+
+/* ---------- sunrise band ---------- */
+.sunrise {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  --sun-w: clamp(220px, 38vw, 400px);
+  padding-block: clamp(72px, 10vw, 128px) calc(var(--sun-w) / 2 + clamp(40px, 6vw, 72px));
+}
+.sunrise::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: var(--sun-w);
+  max-width: 100%;
+  aspect-ratio: 2 / 1;
+  border-radius: 999px 999px 0 0;
+  background: var(--sun);
+  transform: translateX(-50%);
+  animation: rise 2.6s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes rise { from { transform: translate(-50%, 18%); } to { transform: translate(-50%, 0); } }
+@media (prefers-reduced-motion: reduce) { .sunrise::after { animation: none; } }
+.sunrise .wrap { position: relative; z-index: 1; display: grid; gap: 1.6rem; justify-items: center; }
+.sunrise blockquote { margin: 0; }
+.sunrise .sig {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2rem, 1.2rem + 3.4vw, 4.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  max-width: 18ch;
+  margin-inline: auto;
+}
+.sunrise .sig span { display: block; color: var(--sun); }
+
+/* ---------- the evening ---------- */
+.question {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--rule);
+  max-width: 62ch;
+}
+.question .mark {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 3rem + 5vw, 7rem);
+  line-height: 0.8;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.question p { font-family: var(--font-display); font-size: clamp(1.2rem, 1.02rem + 0.65vw, 1.5rem); line-height: 1.38; text-wrap: pretty; }
+.songs { color: var(--ink-soft); }
+.evening-photo img { aspect-ratio: 2 / 3; }
+@media (max-width: 860px) { .evening-photo img { aspect-ratio: 4 / 5; object-position: 50% 30%; } }
+
+/* ---------- narrator ---------- */
+.narrator {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-areas: "photo text" "ledger text";
+  grid-template-rows: auto 1fr;
+  gap: clamp(2rem, 4vw, 2.75rem) clamp(2.25rem, 5.5vw, 5rem);
+  align-items: start;
+}
+.narrator > * { min-width: 0; }
+.narrator .photo { grid-area: photo; }
+.narrator .ledger { grid-area: ledger; }
+.narrator .narrator-text { grid-area: text; display: grid; gap: 1.6rem; align-content: start; }
+.narrator-name { font-size: clamp(2.4rem, 1.5rem + 3.2vw, 4.2rem); }
+.narrator-role { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; color: var(--ink-soft); margin-top: 0.4rem; }
+.ledger { border-top: 2px solid var(--ink); }
+.ledger h3 {
+  font-family: var(--font-label); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase; padding-block: 0.9rem 0.6rem;
+}
+.ledger ol { list-style: none; margin: 0; padding: 0; }
+.ledger li {
+  display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); gap: 0.9rem;
+  padding-block: 0.75rem; border-top: 1px solid var(--rule);
+  line-height: 1.35; font-size: 0.95em;
+}
+.ledger .yr {
+  font-family: var(--font-display); font-weight: 600; color: var(--crimson);
+  font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; font-size: 0.95em;
+}
+@media (max-width: 860px) {
+  .narrator { grid-template-columns: minmax(0, 1fr); grid-template-areas: "photo" "text" "ledger"; grid-template-rows: auto; }
+}
+
+/* ---------- gallery ---------- */
+.gallery { padding-block: 0 clamp(28px, 4vw, 44px); }
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1.22fr 1.74fr 1.38fr;
+  gap: 6px;
+}
+.gallery-row img { width: 100%; height: auto; object-fit: cover; }
+.gallery-row img:nth-child(1) { aspect-ratio: 1.22; }
+.gallery-row img:nth-child(2) { aspect-ratio: 1.74; }
+.gallery-row img:nth-child(3) { aspect-ratio: 1.38; }
+.gallery .wrap { max-width: none; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
+@media (max-width: 700px) {
+  .gallery-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-row img:nth-child(1), .gallery-row img:nth-child(3) { aspect-ratio: 1.3; }
+  .gallery-row img.wide { grid-column: 1 / -1; order: -1; }
+}
+
+/* ---------- program ---------- */
+.program-card {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: -7px;
+  padding: clamp(28px, 5vw, 64px) clamp(20px, 5vw, 64px);
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+.program-head { text-align: center; display: grid; gap: 0.6rem; justify-items: center; }
+.program-head h2 { font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem); }
+.program-head .credit { font-style: italic; color: var(--ink-soft); }
+.parts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.parts > * { min-width: 0; }
+.part { display: grid; gap: 2.2rem; align-content: start; }
+.part-title {
+  font-family: var(--font-label); font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.3em; text-transform: uppercase; text-align: center;
+  display: flex; align-items: center; gap: 1rem;
+}
+.part-title::before, .part-title::after { content: ""; flex: 1; height: 1px; background: var(--ink); }
+.chapter { display: grid; gap: 0.7rem; }
+.chapter-head { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: 0.25rem 0.6rem; align-items: baseline; }
+.numeral {
+  font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; color: var(--crimson);
+  font-variant-numeric: lining-nums;
+}
+.chapter-head h3 { font-size: 1.5rem; }
+.chapter-head .sub { grid-column: 2; font-style: italic; color: var(--ink-soft); line-height: 1.35; }
+.chapter-note { font-size: 0.92em; color: var(--ink-soft); line-height: 1.45; padding-left: 3.2rem; }
+.pieces { list-style: none; margin: 0; padding: 0 0 0 3.2rem; display: grid; gap: 0.75rem; }
+.piece { display: grid; gap: 0.1rem; line-height: 1.3; }
+.piece .title { font-weight: 500; }
+.piece .arr { font-family: var(--font-label); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-left: 0.4rem; }
+.piece .who { font-style: italic; color: var(--ink-soft); font-size: 0.95em; }
+.intermission {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-label); font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.4em; text-transform: uppercase; color: var(--crimson);
+  display: none;
+}
+.program-foot { text-align: center; font-size: 0.9em; color: var(--ink-soft); font-style: italic; }
+@media (max-width: 860px) {
+  .parts { grid-template-columns: minmax(0, 1fr); }
+  .intermission { display: flex; align-items: center; gap: 1rem; }
+  .intermission::before, .intermission::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+}
+@media (max-width: 480px) {
+  .pieces, .chapter-note { padding-left: 0; }
+  .chapter-head { grid-template-columns: 2.2rem minmax(0, 1fr); }
+}
+
+/* ---------- artists ---------- */
+.artists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 6vw, 4.5rem) clamp(2rem, 5vw, 4.5rem);
+}
+.artists > * { min-width: 0; }
+.artist { display: grid; gap: 0.9rem; align-content: start; scroll-margin-top: 1.5rem; }
+.artist .photo { margin-bottom: 0.5rem; }
+.artist .photo img { aspect-ratio: 3 / 2; object-position: 50% 22%; }
+.artist h3 { font-size: clamp(1.7rem, 1.3rem + 1.2vw, 2.3rem); padding-top: 1rem; border-top: 1px solid var(--ink); }
+.artist .voice { margin-top: -0.35rem; }
+.artist p { text-wrap: pretty; }
+details.more { display: grid; gap: 0.9rem; }
+details.more summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-label); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--crimson);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  width: fit-content;
+  padding-block: 0.3rem;
+}
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::after { content: "+"; font-family: var(--font-body); font-size: 1.3em; letter-spacing: 0; line-height: 1; }
+details.more[open] summary::after { content: "–"; }
+details.more[open] summary .closed { display: none; }
+details.more:not([open]) summary .open { display: none; }
+details.more .body { display: grid; gap: 0.9rem; margin-top: 0.9rem; }
+@media (max-width: 760px) { .artists { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- companion event ---------- */
+.harmony-photo img { aspect-ratio: 3 / 2; object-position: 50% 30%; }
+.facts { display: grid; gap: 0; border-top: 1px solid var(--ink); }
+.fact { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--rule); line-height: 1.4; }
+.fact dt { font-family: var(--font-label); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); padding-top: 0.25rem; }
+.fact dd { margin: 0; }
+.fact dd ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.45rem; }
+@media (max-width: 420px) { .fact { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; } }
+
+/* ---------- visit ---------- */
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--night-soft);
+  margin-bottom: 2rem;
+}
+.visit-grid > * { min-width: 0; }
+.visit-col { display: grid; gap: 0.6rem; align-content: start; padding: 1.6rem 1.6rem 1.8rem 0; }
+.visit-col + .visit-col { padding-left: 1.6rem; border-left: 1px solid rgba(189, 179, 162, 0.35); }
+.visit-col p.big { font-family: var(--font-display); font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.85rem); line-height: 1.2; color: var(--night-ink); }
+.visit-col p:not(.label):not(.big) { color: var(--night-soft); line-height: 1.45; }
+.visit-col p strong { color: var(--night-ink); font-weight: 500; }
+.visit-col a.text-link { color: var(--sun); text-underline-offset: 3px; }
+.phone { font-variant-numeric: tabular-nums; color: var(--night-ink); user-select: all; }
+@media (max-width: 860px) {
+  .visit-grid { grid-template-columns: minmax(0, 1fr); }
+  .visit-col { padding: 1.4rem 0; }
+  .visit-col + .visit-col { padding-left: 0; border-left: 0; border-top: 1px solid rgba(189, 179, 162, 0.35); }
+}
+
+/* ---------- beyond ---------- */
+.beyond {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 5vw, 4.5rem) clamp(2rem, 5vw, 4.5rem);
+}
+.beyond > * { min-width: 0; }
+.beyond-item { display: grid; gap: 1rem; align-content: start; }
+.beyond-item .photo { margin-bottom: 0.4rem; }
+.beyond-item .photo img { aspect-ratio: 16 / 10; }
+.beyond-item .label { padding-top: 1rem; border-top: 1px solid var(--ink); }
+.beyond-item .meta { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; }
+.beyond-item .meta .accent { color: var(--crimson); }
+@media (max-width: 760px) { .beyond { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- footer ---------- */
+footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
+.foot-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.foot-grid > * { min-width: 0; }
+.foot-col { display: grid; gap: 0.7rem; align-content: start; }
+.foot-col p:not(.label):not(.rcp):not(.stage) { color: var(--night-soft); line-height: 1.5; font-size: 0.95em; }
+.foot-col p strong { color: var(--night-ink); font-weight: 500; }
+.foot-col .rcp { font-family: var(--font-display); font-size: 1.6rem; line-height: 1.15; color: var(--night-ink); }
+.foot-col .stage { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sun); }
+.foot-col a { color: var(--night-ink); text-underline-offset: 3px; }
+.email { user-select: all; }
+.colophon {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(189, 179, 162, 0.3);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem 2rem;
+  font-family: var(--font-label); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--night-soft);
+}
+@media (max-width: 860px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free At Last? · November 20, 2026 at St. Peter’s, Fernandina Beach">
+<meta property="og:description" content="Narration by Dr. Johnnetta Betsch Cole with Ritz Chamber Players. Friday, November 20, 2026, 7:00 p.m. Reserve your seats.">
+<meta property="og:url" content="https://freeatlastrcp.org/">
+<meta property="og:image" content="https://freeatlastrcp.org/img/cole-podium.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/face-johnnetta-cole.jpg">
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div class="org"><strong>Ritz Chamber Players</strong><span>Silver Jubilee Season 2026–2027</span></div>
+    <nav aria-label="On this page">
+      <a href="#evening">The Evening</a>
+      <a href="#narrator">Narrator</a>
+      <a href="#program">Program</a>
+      <a href="#artists">Artists</a>
+      <a href="#visit">Visit</a>
+      <a class="reserve" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener">Reserve</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <header class="hero paper">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="presenter">St. Peter’s Episcopal Church presents</p>
+        <h1>
+          <img src="img/free-at-last-logo.webp" width="1200" height="974" fetchpriority="high" alt="Free At Last? The Evolution of the American Spiritual. Narration by Dr. Johnnetta Betsch Cole, featuring Ritz Chamber Players.">
+        </h1>
+        <p class="campaign">Songs of faith. Voices of freedom.</p>
+        <div class="when">
+          <p class="date">Friday, November 20, 2026 <span class="time">· 7:00 p.m.</span></p>
+          <p class="venue">St. Peter’s Episcopal Church · 801 Atlantic Avenue · Fernandina Beach, Florida</p>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-solid" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener">Reserve Your Seats <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="https://onrealm.org/StPetersEpiscop9300/give/freeatlast" target="_blank" rel="noopener">Support This Performance</a>
+        </div>
+        <p class="fine">Suggested donation of $20 per person. Seating is limited, and registration closes November 17th or when capacity is reached.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/cole-podium.jpg" width="1200" height="1800" fetchpriority="high" alt="Dr. Johnnetta Betsch Cole, in kente cloth and headwrap, narrates from a clear podium on the stage of Terry Concert Hall, with drums and a pianist behind her.">
+        <figcaption>Dr. Johnnetta Betsch Cole narrates <i>Free At Last?</i> at Terry Concert Hall, Jacksonville</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="cast paper-2" aria-label="Featuring">
+    <div class="wrap">
+      <p class="label">Featuring</p>
+      <ul class="cast-list">
+        <li><a href="#narrator"><img src="img/face-johnnetta-cole.jpg" width="320" height="320" alt=""><span class="cast-name">Dr. Johnnetta Betsch Cole</span><span class="cast-role">Narrator</span></a></li>
+        <li><a href="#alison-buchanan"><img src="img/face-alison-buchanan.jpg" width="320" height="320" alt=""><span class="cast-name">Alison Buchanan</span><span class="cast-role">Soprano</span></a></li>
+        <li><a href="#ann-marie-mcphail"><img src="img/face-ann-marie-mcphail.jpg" width="320" height="320" alt=""><span class="cast-name">Ann Marie McPhail</span><span class="cast-role">Soprano</span></a></li>
+        <li><a href="#robert-sims"><img src="img/face-robert-sims.jpg" width="320" height="320" alt=""><span class="cast-name">Robert Sims</span><span class="cast-role">Baritone</span></a></li>
+        <li><a href="#artina-mccain"><img src="img/face-artina-mccain.jpg" width="320" height="320" alt=""><span class="cast-name">Artina McCain</span><span class="cast-role">Piano</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band night sunrise" aria-label="Signature line">
+    <div class="wrap">
+      <p class="label">Free At Last?</p>
+      <blockquote>
+        <p class="sig">Joy and resistance are not opposites. <span>They never were.</span></p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="band paper" id="evening">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">The Evening</p>
+      </div>
+      <div class="split">
+        <div class="stack">
+          <h2>An evening of music and historical reflection</h2>
+          <div class="prose">
+            <p class="lede"><em>Free At Last?</em> places the African American Spiritual at the center of the evening. Through music and spoken word, its chapters trace a journey through endurance, sorrow, resistance, and the celebration of freedom.</p>
+            <p>Born among African Americans held in slavery, the spiritual carried faith, sorrow, resistance, and hope across generations. An opening chant gathers the voices before the spirituals that follow. Through solo songs, duets, and shared performances, the program brings individual expression into conversation with communal memory, and Dr. Johnnetta Betsch Cole’s narration connects each chapter, inviting listeners to consider the lives and histories carried within the music.</p>
+          </div>
+          <div class="question">
+            <span class="mark" aria-hidden="true">?</span>
+            <p>The question in the title remains open. Alongside expressions of deliverance, the program asks what freedom requires of those who inherit its unfinished promise.</p>
+          </div>
+          <p class="songs prose">Hear beloved spirituals including “Deep River,” “There Is a Balm in Gilead,” “Ride On, King Jesus,” and “He’s Got the Whole World in His Hands,” performed by sopranos Alison Buchanan and Ann Marie McPhail, lyric baritone Robert Sims, and pianist Artina McCain.</p>
+        </div>
+        <figure class="photo framed evening-photo">
+          <img src="img/robert-sims-sings.jpg" width="1000" height="1500" loading="lazy" decoding="async" alt="Baritone Robert Sims, seated before a grand piano, sings with his eyes closed as the pianist watches from the keyboard.">
+          <figcaption>Robert Sims in <i>Free At Last?</i> at Terry Concert Hall</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper-2" id="narrator">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">The Narrator</p>
+      </div>
+      <div class="narrator">
+        <figure class="photo">
+          <img src="img/cole-speaking.jpg" width="1000" height="891" loading="lazy" decoding="async" alt="Dr. Johnnetta Betsch Cole, in academic cap and gown, speaks at a podium.">
+          <figcaption>Dr. Johnnetta Betsch Cole</figcaption>
+        </figure>
+        <div class="narrator-text">
+          <div>
+            <h2 class="narrator-name">Dr. Johnnetta Betsch Cole</h2>
+            <p class="narrator-role">Narrator</p>
+          </div>
+          <div class="prose">
+            <p class="lede">Dr. Johnnetta Betsch Cole is an anthropologist, educator, and cultural leader whose work has strengthened institutions devoted to Black history, art, and opportunity.</p>
+            <p>Born in Jacksonville, she entered Fisk University at fifteen, graduated from Oberlin College, and earned master’s and doctoral degrees in anthropology at Northwestern University. Her academic career has included teaching and leadership appointments at Washington State University, the University of Massachusetts Amherst, Hunter College, and Emory University. Her books include <i>Conversations: Straight Talk with America’s Sister President</i> and <i>Gender Talk</i>.</p>
+            <p>Her connection to Northeast Florida includes a family history of advocacy for Black life and culture. Her sister, MaVynee Betsch, was an opera singer who became the environmental advocate known as the Beach Lady of American Beach.</p>
+            <p>As narrator of <em>Free At Last?</em>, Dr. Cole brings her scholarship and her commitment to cultural understanding to a program that invites audiences to hear these songs as expressions of faith, endurance, and the continuing pursuit of freedom. On November 20th, she shares it with her own parish, St. Peter’s.</p>
+          </div>
+        </div>
+        <aside class="ledger" aria-label="Milestones">
+          <h3>A life of firsts</h3>
+          <ol>
+            <li><span class="yr">1987</span><span>First Black woman to serve as president of Spelman College, which she led until 1997</span></li>
+            <li><span class="yr">2002–07</span><span>President of Bennett College</span></li>
+            <li><span class="yr">2009–17</span><span>Director, Smithsonian’s National Museum of African Art</span></li>
+            <li><span class="yr">2018–22</span><span>National chair and seventh president, National Council of Negro Women</span></li>
+            <li><span class="yr">2021</span><span>National Humanities Medal</span></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper" id="program">
+    <div class="wrap">
+      <div class="program-card">
+        <div class="program-head">
+          <p class="label">The Program</p>
+          <h2>Free At Last?</h2>
+          <p class="credit">Dr. Johnnetta Betsch Cole, narration · Artina McCain, piano</p>
+        </div>
+        <div class="parts">
+          <div class="part">
+            <p class="part-title">Part One</p>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral" aria-hidden="true"></span>
+                <h3>Opening Prelude</h3>
+                <p class="sub">Ancestral Roots</p>
+              </div>
+              <p class="chapter-note">A gathering of voices opens our journey, placing communal song at the heart of the evening.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">African Chant</span><span class="arr">traditional, Mbuti people</span></span><span class="who">Alison Buchanan, Ann Marie McPhail, and Robert Sims</span></li>
+              </ul>
+            </div>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral">I</span>
+                <h3>Songs of Endurance</h3>
+                <p class="sub">The Sound of Survival</p>
+              </div>
+              <p class="chapter-note">These spirituals voice endurance and the longing for rest, home, and freedom.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">Swing Low, Sweet Chariot</span><span class="arr">arr. Burleigh</span></span><span class="who">Robert Sims</span></li>
+                <li class="piece"><span><span class="title">Po’ Mourner’s Got a Home at Last</span><span class="arr">arr. Burleigh</span></span><span class="who">Ann Marie McPhail</span></li>
+                <li class="piece"><span><span class="title">No Ways Tired</span><span class="arr">arr. Hairston</span></span><span class="who">Alison Buchanan</span></li>
+              </ul>
+            </div>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral">II</span>
+                <h3>Sorrow Songs</h3>
+                <p class="sub">Lament, Memory, and the Cry for Mercy</p>
+              </div>
+              <p class="chapter-note">Songs of grief and consolation hold sorrow alongside faith in mercy and healing.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">Lord, How Come Me Here?</span><span class="arr">traditional spiritual</span></span><span class="who">Robert Sims</span></li>
+                <li class="piece"><span><span class="title">Nobody Knows the Trouble I’ve Seen</span><span class="arr">arr. Johnson</span></span><span class="who">Alison Buchanan</span></li>
+                <li class="piece"><span><span class="title">There Is a Balm in Gilead</span><span class="arr">arr. Burleigh</span></span><span class="who">Alison Buchanan and Ann Marie McPhail</span></li>
+                <li class="piece"><span><span class="title">Guide My Feet</span><span class="arr">arr. Hairston</span></span><span class="who">Ann Marie McPhail</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="intermission">Intermission</p>
+
+          <div class="part">
+            <p class="part-title">Part Two</p>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral">III</span>
+                <h3>Songs of Resistance</h3>
+                <p class="sub">Faith and the Journey to Freedom</p>
+              </div>
+              <p class="chapter-note">Through images of crossing, refuge, and deliverance, these songs give voice to the determination to be free.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">Follow the Drinking Gourd</span><span class="arr">traditional folk song</span></span><span class="who">Ann Marie McPhail</span></li>
+                <li class="piece"><span><span class="title">Deep River</span><span class="arr">arr. Williams</span></span><span class="who">Alison Buchanan</span></li>
+                <li class="piece"><span><span class="title">Go Down, Moses / Wade in the Water</span><span class="arr">arr. Carter</span></span><span class="who">Robert Sims</span></li>
+                <li class="piece"><span><span class="title">Plenty Good Room</span><span class="arr">arr. Hairston</span></span><span class="who">Alison Buchanan and Robert Sims</span></li>
+              </ul>
+            </div>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral">IV</span>
+                <h3>Freedom Songs</h3>
+                <p class="sub">Jubilee, Triumph, and the Ongoing Journey</p>
+              </div>
+              <p class="chapter-note">Songs of liberation and praise celebrate freedom while reminding us that its promise must be renewed.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">Oh, Freedom / Free at Last</span><span class="arr">medley of traditional spirituals</span></span><span class="who">Alison Buchanan, Ann Marie McPhail, and Robert Sims</span></li>
+                <li class="piece"><span><span class="title">Ride On, King Jesus</span><span class="arr">arr. Hall Johnson</span></span><span class="who">Alison Buchanan</span></li>
+                <li class="piece"><span><span class="title">Come Down, Angels</span><span class="arr">arr. Moore</span></span><span class="who">Ann Marie McPhail</span></li>
+                <li class="piece"><span><span class="title">Is There Anybody Here Who Loves My Jesus</span><span class="arr">arr. Carter</span></span><span class="who">Robert Sims</span></li>
+              </ul>
+            </div>
+
+            <div class="chapter">
+              <div class="chapter-head">
+                <span class="numeral" aria-hidden="true"></span>
+                <h3>Epilogue</h3>
+                <p class="sub">And Still We Sing</p>
+              </div>
+              <p class="chapter-note">The spiritual remains a living tradition, passed from one generation to the next through performance and remembrance.</p>
+              <ul class="pieces">
+                <li class="piece"><span><span class="title">He’s Got the Whole World in His Hands</span><span class="arr">arr. Bonds</span></span><span class="who">Alison Buchanan, Ann Marie McPhail, Robert Sims, and Artina McCain</span></li>
+                <li class="piece"><span><span class="title">Amen</span></span><span class="who">Alison Buchanan, Ann Marie McPhail, Robert Sims, and Artina McCain</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="program-foot">There will be one intermission. Program subject to change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery night" aria-label="Ritz Chamber Players in performance">
+    <div class="gallery-row">
+      <img src="img/rcp-bows.jpg" width="1400" height="1149" loading="lazy" decoding="async" alt="Three Ritz Chamber Players musicians, a clarinetist, a pianist in a blue gown, and a string player, stand together before a grand piano.">
+      <img class="wide" src="img/rcp-quintet-terry.jpg" width="1600" height="917" loading="lazy" decoding="async" alt="A Ritz Chamber Players ensemble of strings and piano performs on the wood-paneled stage of Terry Concert Hall.">
+      <img src="img/rcp-pianist.jpg" width="1400" height="1018" loading="lazy" decoding="async" alt="A pianist in a blue gown plays a grand piano, her face turned toward the ensemble.">
+    </div>
+    <div class="wrap">
+      <p class="caption">Ritz Chamber Players at Terry Concert Hall, Jacksonville University</p>
+      <p class="caption">Celebrating 25 Years of EXPANDING THE STAGE</p>
+    </div>
+  </section>
+
+  <section class="band paper-2" id="artists">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">The Artists</p>
+        <h2>Four artists, one living tradition</h2>
+      </div>
+      <div class="artists">
+
+        <article class="artist" id="alison-buchanan">
+          <figure class="photo"><img src="img/alison-buchanan.jpg" width="706" height="474" loading="lazy" decoding="async" alt="Portrait of soprano Alison Buchanan, smiling, in a gold and navy print jacket."></figure>
+          <h3>Alison Buchanan</h3>
+          <p class="label voice">Soprano</p>
+          <p>British soprano Alison Buchanan brings an international career in opera, concert performance, and artistic leadership. As artistic director of Pegasus Opera Company, she champions composers and performers of African and Asian heritage and creates opportunities for emerging singers.</p>
+          <details class="more">
+            <summary><span class="closed">Read full biography</span><span class="open">Show less</span></summary>
+            <div class="body">
+              <p>A graduate of London’s Guildhall School of Music and Drama and Philadelphia’s Curtis Institute of Music, Buchanan completed the Adler Fellowship at San Francisco Opera, where she made her debut as Mimì in <i>La bohème</i>. She has performed with orchestras including the London Symphony, Baltimore Symphony, Sydney Symphony, Boston Symphony, and Philadelphia Orchestra. Her collaborators have included Sir Colin Davis, Sir Simon Rattle, André Previn, and Marin Alsop.</p>
+              <p>Her recordings include <i>Peter Grimes</i> with the London Symphony Orchestra under Sir Colin Davis and songs by George Walker with the composer at the piano. In 2021, she curated <i>Mami Wata</i> at the Royal Opera House, celebrating vocal music by Black and Middle Eastern women. Her screen appearances include <i>Queen Charlotte: A Bridgerton Story</i>. Across her work as a singer and artistic director, Buchanan maintains a commitment to expanding opportunities in classical music.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="artist" id="ann-marie-mcphail">
+          <figure class="photo"><img src="img/ann-marie-mcphail.jpg" width="706" height="474" loading="lazy" decoding="async" alt="Portrait of soprano Ann Marie McPhail, seated beside a grand piano in a blue dress."></figure>
+          <h3>Ann Marie McPhail</h3>
+          <p class="label voice">Soprano</p>
+          <p>Atlanta native Ann Marie McPhail is a lyric soprano whose work spans opera, concert music, film, and education. She made her professional debut as the Countess in Mozart’s <i>The Marriage of Figaro</i> with Houston Ebony Opera and performed at the closing ceremonies of the 1996 Centennial Olympic Games.</p>
+          <details class="more">
+            <summary><span class="closed">Read full biography</span><span class="open">Show less</span></summary>
+            <div class="body">
+              <p>Her screen credits include Tyler Perry’s <i>For Colored Girls</i>. On the operatic stage, she has appeared as Strawberry Woman in Gershwin’s <i>Porgy and Bess</i> with Atlanta Opera. In 2019, she was soprano soloist in the premiere of Bill Banfield’s <i>SHINE</i> at the National Association of Negro Musicians centennial convention in Chicago. She also sang in Atlanta Ballet’s 2020 premiere of <i>Sunrise Divine</i>.</p>
+              <p>McPhail has performed with companies including San Francisco Opera, Opera Ebony, and Houston Ebony Opera, and with the Savannah Philharmonic. Her teaching appointments have included Clark Atlanta University, Spelman College, Agnes Scott College, Talladega College, and Grambling State University. She holds degrees in music education from Clark Atlanta University and voice performance from Georgia State University, and brings a particular commitment to interpreting the African American spiritual.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="artist" id="robert-sims">
+          <figure class="photo"><img src="img/robert-sims.jpg" width="706" height="474" loading="lazy" decoding="async" alt="Portrait of baritone Robert Sims, smiling, in a black suit before a damask wall."></figure>
+          <h3>Robert Sims</h3>
+          <p class="label voice">Lyric Baritone</p>
+          <p>Lyric baritone Robert Sims has devoted much of his career to interpreting African American spirituals and folk songs. A Gold Medal winner of the American Traditions Competition, he made his Carnegie Hall solo debut in 2005 with a special appearance by Odetta. He returned in 2009 at Jessye Norman’s invitation for <i>Honor! A Celebration of the African American Cultural Legacy</i>.</p>
+          <details class="more">
+            <summary><span class="closed">Read full biography</span><span class="open">Show less</span></summary>
+            <div class="body">
+              <p>Sims has performed the leading baritone role in <i>The James Baldwin Chronicles</i> with Renee Baker and the Chicago Modern Orchestra Project, and Pangloss in Bernstein’s <i>Candide</i> with the Oakland Symphony. His work with Chicago Opera Theater includes the world premiere of Dan Shore’s <i>Freedom Ride</i>.</p>
+              <p>He has toured Germany, Austria, and Switzerland with Roland Carter and the inSpirit Male Chorus, performing spirituals by Noah Ryder, Carter, and Roland Hayes. He also produced <i>Masters of the Spiritual</i> at Lincoln Center.</p>
+              <p>Sims founded Three Generations, a touring group devoted to American spirituals and folk songs whose artists have included George Shirley, Kenneth Overton, William Warfield, and Benjamin Matthews. He has also performed with Simon Estes and Jubilant Sykes as Simon, Sykes &amp; Sims.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="artist" id="artina-mccain">
+          <figure class="photo"><img src="img/artina-mccain.jpg" width="706" height="474" loading="lazy" decoding="async" alt="Portrait of pianist Artina McCain leaning on a grand piano in an empty concert hall."></figure>
+          <h3>Artina McCain</h3>
+          <p class="label voice">Piano</p>
+          <p>Artina McCain combines an international performing career with teaching, recording, and advocacy for music by underrepresented composers. Her recital appearances include Wigmore Hall, the Barbican Centre, Walt Disney Concert Hall, and Weill Recital Hall at Carnegie Hall. She has also performed with the Dallas and Memphis symphony orchestras.</p>
+          <details class="more">
+            <summary><span class="closed">Read full biography</span><span class="open">Show less</span></summary>
+            <div class="body">
+              <p>Her recordings include <i>I, Too</i>, a Naxos release featuring African American spirituals and art songs, and collaborations with her husband and duo partner, trombonist Martin McCain. She arranged <i>Twenty-Four Traditional African American Folk Songs</i> for intermediate pianists, published by Hal Leonard.</p>
+              <p>Drawing on her recovery from a performance injury, McCain advocates for musicians’ wellness through articles, lectures, and educational programs. Her story has been featured on the BBC podcast <i>Sideways</i>.</p>
+              <p>McCain earned degrees from Southern Methodist University, the Cleveland Institute of Music, and the University of Texas at Austin. She is associate professor of piano and coordinator of the keyboard area at the University of Memphis, and co-founder and director of the Memphis International Piano Festival and Competition.</p>
+            </div>
+          </details>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper" id="harmony">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Earlier That Day</p>
+        <h2>Harmony &amp; Healing</h2>
+      </div>
+      <div class="split">
+        <div class="stack">
+          <figure class="photo harmony-photo">
+            <img src="img/cole-portrait.jpg" width="706" height="471" loading="lazy" decoding="async" alt="Portrait of Dr. Johnnetta Betsch Cole, smiling, against a blue background.">
+            <figcaption>Facilitated by Dr. Johnnetta Betsch Cole</figcaption>
+          </figure>
+          <div class="prose">
+            <p class="lede"><em>Where Art Meets Science</em></p>
+            <p>A free community conversation on mental health through the lens of African American music and culture, presented by Story &amp; Song Bookstore and facilitated by Dr. Johnnetta Betsch Cole.</p>
+          </div>
+          <div class="ctas">
+            <a class="btn btn-solid" href="https://storyandsongarts.org" target="_blank" rel="noopener">RSVP with Story &amp; Song <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <dl class="facts">
+          <div class="fact"><dt>When</dt><dd>Friday, November 20, 2026<br>2:00–4:00 p.m.</dd></div>
+          <div class="fact"><dt>Where</dt><dd>Story &amp; Song Bookstore<br>1430 Park Avenue, Fernandina Beach</dd></div>
+          <div class="fact"><dt>Facilitator</dt><dd>Johnnetta Betsch Cole, Ph.D.</dd></div>
+          <div class="fact"><dt>Panelists</dt><dd><ul>
+            <li>Tara Beth Anderson, MSN, RN, NE-BC, FACHE, President, Baptist Medical Center Nassau</li>
+            <li>Semikah Yisrael-Johnson, MS, LMFT, Clinical Director, Starting Point Behavioral Healthcare</li>
+            <li>Ritz Chamber Players</li>
+          </ul></dd></div>
+          <div class="fact"><dt>Admission</dt><dd>Free and open to the public. RSVP required at storyandsongarts.org or <span class="phone-plain">(904) 601-2118</span>.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band night" id="visit">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Plan Your Evening</p>
+        <h2>Join us at St. Peter’s</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-col">
+          <p class="label">When</p>
+          <p class="big">Friday, November 20, 2026</p>
+          <p><strong>7:00 p.m.</strong> One intermission.</p>
+        </div>
+        <div class="visit-col">
+          <p class="label">Where</p>
+          <p class="big">St. Peter’s Episcopal Church</p>
+          <p>801 Atlantic Avenue<br>Fernandina Beach, Florida 32034</p>
+          <p><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=St.+Peter%27s+Episcopal+Church+801+Atlantic+Avenue+Fernandina+Beach+FL+32034" target="_blank" rel="noopener">Get directions</a></p>
+        </div>
+        <div class="visit-col">
+          <p class="label">Reservations</p>
+          <p class="big">Suggested donation $20</p>
+          <p>Seating is limited. Registration closes <strong>November 17th</strong> or when capacity is reached.</p>
+          <p>To reserve by phone, call the church office at <a class="phone" href="tel:+19042614293">904.261.4293</a>.</p>
+        </div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-solid" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener">Reserve Your Seats <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="https://onrealm.org/StPetersEpiscop9300/give/freeatlast" target="_blank" rel="noopener">Support This Performance</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper" id="beyond">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Beyond November 20th</p>
+        <h2>The song travels on</h2>
+      </div>
+      <div class="beyond">
+        <article class="beyond-item">
+          <figure class="photo"><img src="img/rcp-singer-ensemble.jpg" width="797" height="533" loading="lazy" decoding="async" alt="A soprano sings with a string quartet and pianist on a wood-floored concert stage."></figure>
+          <p class="label">The National Tour</p>
+          <h3>Free At Last? goes national in 2027</h3>
+          <p class="meta">Launching in Atlanta <span class="accent">·</span> February 19, 2027<br>Rialto Center for the Arts</p>
+          <p>Following this special presentation at St. Peter’s, <em>Free At Last?</em> begins its 10-city national tour, carrying Dr. Cole’s narration and this music to ten cities through October 2027.</p>
+          <div class="ctas">
+            <a class="btn btn-line" href="https://www.zeffy.com/en-US/donation-form/free-at-last-the-national-tour" target="_blank" rel="noopener">Support the National Tour</a>
+          </div>
+        </article>
+        <article class="beyond-item">
+          <figure class="photo"><img src="img/rcp-ensemble-terry.jpg" width="711" height="425" loading="lazy" decoding="async" alt="Ritz Chamber Players musicians with piano, strings, and clarinet perform on the stage of Terry Concert Hall."></figure>
+          <p class="label">The Next Evening</p>
+          <h3>Silver Jubilee Opening Night</h3>
+          <p class="meta"><em>Expanding Horizons</em> <span class="accent">·</span> Saturday, November 21, 2026<br>7:30 p.m. · Terry Concert Hall, Jacksonville University</p>
+          <p>Ritz Chamber Players opens its 25th anniversary season the night after <em>Free At Last?</em>, with music by Haydn, Valerie Coleman, André Previn, James Lee III, and Shostakovich. Free and open to the public.</p>
+          <div class="ctas">
+            <a class="btn btn-line" href="https://ritzchamberplayers.org" target="_blank" rel="noopener">Visit Ritz Chamber Players</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="night">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="rcp">Ritz Chamber Players</p>
+        <p class="stage">Celebrating 25 Years of EXPANDING THE STAGE</p>
+        <p>Founded in Jacksonville in 2002 by clarinetist Terrance L. Patterson, Ritz Chamber Players presents world-class chamber music that centers the artistry of composers and performers of African descent. Now in its Silver Jubilee Season, RCP connects audiences with the richness of the classical tradition through performances, new commissions, education, and community engagement.</p>
+        <p><a href="https://ritzchamberplayers.org" target="_blank" rel="noopener">ritzchamberplayers.org</a></p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Presented by</p>
+        <p><strong>St. Peter’s Episcopal Church</strong><br>801 Atlantic Avenue<br>Fernandina Beach, Florida 32034</p>
+        <p>The Reverend Sarah Minton, Rector<br>Timothy McKee, Director of Music Ministries</p>
+        <p><a href="https://www.stpetersparish.org" target="_blank" rel="noopener">stpetersparish.org</a></p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Contact</p>
+        <p><strong>Reservations</strong><br>St. Peter’s church office<br><span class="phone">904.261.4293</span></p>
+        <p><strong>Media</strong><br>Amanda Anderson, Ritz Chamber Players<br><span class="email">amanda@ritzchamberplayers.org</span></p>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Free At Last? The Evolution of the American Spiritual</span>
+      <span>© 2026 Ritz Chamber Music Society, Inc.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
