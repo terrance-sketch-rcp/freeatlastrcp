@@ -352,18 +352,16 @@ em, i { font-style: italic; }
 .gallery { padding-block: 0 clamp(28px, 4vw, 44px); }
 .gallery-row {
   display: grid;
-  grid-template-columns: 1.22fr 1.74fr 1.38fr;
+  grid-template-columns: 1.1fr 1.5fr;
   gap: 6px;
 }
 .gallery-row img { width: 100%; height: auto; object-fit: cover; }
-.gallery-row img:nth-child(1) { aspect-ratio: 1.22; }
-.gallery-row img:nth-child(2) { aspect-ratio: 1.74; }
-.gallery-row img:nth-child(3) { aspect-ratio: 1.38; }
+.gallery-row img:nth-child(1) { aspect-ratio: 1.1; object-position: 50% 60%; }
+.gallery-row img:nth-child(2) { aspect-ratio: 1.5; }
 .gallery .wrap { max-width: none; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
 @media (max-width: 700px) {
-  .gallery-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gallery-row img:nth-child(1), .gallery-row img:nth-child(3) { aspect-ratio: 1.3; }
-  .gallery-row img.wide { grid-column: 1 / -1; order: -1; }
+  .gallery-row { grid-template-columns: minmax(0, 1fr); }
+  .gallery-row img:nth-child(1), .gallery-row img:nth-child(2) { aspect-ratio: 1.5; }
 }
 
 /* ---------- program ---------- */
@@ -413,9 +411,24 @@ em, i { font-style: italic; }
   letter-spacing: 0.4em; text-transform: uppercase; color: var(--crimson);
   display: none;
 }
+.part:first-child { grid-template-rows: repeat(4, auto) 1fr; align-content: stretch; }
+.interval {
+  align-self: center; justify-self: center;
+  display: grid; justify-items: center; gap: 0.7rem; text-align: center;
+  width: min(100%, 17rem); padding: 1.8rem 1rem;
+  border-block: 1px solid var(--rule);
+}
+.interval-orn { font-size: 1.3rem; line-height: 1; color: var(--crimson); }
+.interval-word {
+  font-family: var(--font-label); font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.4em; text-transform: uppercase; color: var(--crimson);
+  padding-left: 0.4em;
+}
+.interval-note { font-family: var(--font-display); font-style: italic; color: var(--ink-soft); font-size: 0.95rem; }
 .program-foot { text-align: center; font-size: 0.9em; color: var(--ink-soft); font-style: italic; }
 @media (max-width: 860px) {
   .parts { grid-template-columns: minmax(0, 1fr); }
+  .interval { display: none; }
   .intermission { display: flex; align-items: center; gap: 1rem; }
   .intermission::before, .intermission::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
 }
@@ -631,7 +644,7 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
       </div>
       <div class="narrator">
         <figure class="photo">
-          <img src="img/cole-speaking.jpg" width="1000" height="891" loading="lazy" decoding="async" alt="Dr. Johnnetta Betsch Cole, in academic cap and gown, speaks at a podium.">
+          <img src="img/cole-seated.jpg" width="488" height="767" loading="lazy" decoding="async" alt="Dr. Johnnetta Betsch Cole, smiling, seated in a carved armchair in a dark embroidered jacket, hands folded, in a black-and-white portrait.">
           <figcaption>Dr. Johnnetta Betsch Cole</figcaption>
         </figure>
         <div class="narrator-text">
@@ -712,6 +725,11 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
                 <li class="piece"><span><span class="title">Guide My Feet</span><span class="arr">arr. Hairston</span></span><span class="who">Ann Marie McPhail</span></li>
               </ul>
             </div>
+            <div class="interval" aria-hidden="true">
+              <span class="interval-orn">&#10087;</span>
+              <p class="interval-word">Intermission</p>
+              <p class="interval-note">Part Two follows</p>
+            </div>
           </div>
 
           <p class="intermission">Intermission</p>
@@ -770,9 +788,8 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
 
   <section class="gallery night" aria-label="Ritz Chamber Players in performance">
     <div class="gallery-row">
-      <img src="img/rcp-bows.jpg" width="1400" height="1149" loading="lazy" decoding="async" alt="Three Ritz Chamber Players musicians, a clarinetist, a pianist in a blue gown, and a string player, stand together before a grand piano.">
-      <img class="wide" src="img/rcp-quintet-terry.jpg" width="1600" height="917" loading="lazy" decoding="async" alt="A Ritz Chamber Players ensemble of strings and piano performs on the wood-paneled stage of Terry Concert Hall.">
-      <img src="img/rcp-pianist.jpg" width="1400" height="1018" loading="lazy" decoding="async" alt="A pianist in a blue gown plays a grand piano, her face turned toward the ensemble.">
+      <img src="img/rcp-free-at-last-stage.jpg" width="1400" height="1272" loading="lazy" decoding="async" alt="A soprano in a blue print gown sings center stage at Terry Concert Hall as a pianist in African print plays beside a conga drum, with fellow performers seated nearby.">
+      <img class="wide" src="img/rcp-soprano-quartet.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="A soprano sings with a string quartet beside a Steinway grand piano on the wood stage of Terry Concert Hall.">
     </div>
     <div class="wrap">
       <p class="caption">Ritz Chamber Players at Terry Concert Hall, Jacksonville University</p>
@@ -925,7 +942,7 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
       </div>
       <div class="beyond">
         <article class="beyond-item">
-          <figure class="photo"><img src="img/rcp-singer-ensemble.jpg" width="797" height="533" loading="lazy" decoding="async" alt="A soprano sings with a string quartet and pianist on a wood-floored concert stage."></figure>
+          <figure class="photo"><img src="img/rcp-ensemble-terry.jpg" width="711" height="425" loading="lazy" decoding="async" alt="Ritz Chamber Players musicians with piano, strings, and clarinet perform on the stage of Terry Concert Hall."></figure>
           <p class="label">The National Tour</p>
           <h3>Free At Last? goes national in 2027</h3>
           <p class="meta">Launching in Atlanta <span class="accent">·</span> February 19, 2027<br>Rialto Center for the Arts</p>
@@ -935,7 +952,7 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
           </div>
         </article>
         <article class="beyond-item">
-          <figure class="photo"><img src="img/rcp-ensemble-terry.jpg" width="711" height="425" loading="lazy" decoding="async" alt="Ritz Chamber Players musicians with piano, strings, and clarinet perform on the stage of Terry Concert Hall."></figure>
+          <figure class="photo"><img src="img/rcp-25-mark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Ritz Chamber Players 25th anniversary mark: the name set within a silver numeral 25."></figure>
           <p class="label">The Next Evening</p>
           <h3>Silver Jubilee Opening Night</h3>
           <p class="meta"><em>Expanding Horizons</em> <span class="accent">·</span> Saturday, November 21, 2026<br>7:30 p.m. · Terry Concert Hall, Jacksonville University</p>
