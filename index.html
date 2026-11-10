@@ -7,20 +7,22 @@
 <meta name="description" content="Free At Last? The Evolution of the American Spiritual. Narration by Dr. Johnnetta Betsch Cole with Ritz Chamber Players. Friday, November 20, 2026, 7:00 p.m., St. Peter’s Episcopal Church, Fernandina Beach.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap">
 <style>
 /* Layout: a split hero (mark on paper, Dr. Cole on stage), a row of faces, then editorial sections that pair text with photographs; night bands and a full-bleed gallery set the rhythm; the program is set like a printed concert program. */
 :root {
-  --paper: #FBF7EF;
-  --paper-2: #F2EADB;
+  --paper: #F8F1DA;
+  --paper-2: #F1E6C6;
   --ink: #1C1917;
   --ink-soft: #5A524A;
-  --rule: #D8CDBB;
-  --night: #15120F;
-  --night-2: #221D18;
+  --rule: #D9CCA4;
+  --night: #231F20;
+  --night-2: #2E2A2B;
   --night-ink: #F6F0E4;
   --night-soft: #BDB3A2;
-  --sun: #F6C915;
+  --sun: #FDDD04;
+  --poster-cream: #F7EECF;
+  --poster-red: #ED1C24;
   --crimson: #B0141F;
   --font-display: "Bodoni Moda", "Bodoni 72", Didot, "Didot LT STD", Georgia, serif;
   --font-body: "EB Garamond", Garamond, "Adobe Garamond Pro", "Times New Roman", serif;
@@ -539,6 +541,80 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
   color: var(--night-soft);
 }
 @media (max-width: 860px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- poster: the 11x17 poster carried onto the page ---------- */
+.poster-top { background: var(--poster-cream); }
+.poster-top h1 { margin: 0 auto; max-width: 1100px; }
+.poster-top h1 img { width: 100%; }
+.poster-band { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 104px); }
+.poster-band .wrap { max-width: 64rem; }
+.poster-tag {
+  font-family: var(--font-display); font-weight: 400; color: var(--sun);
+  font-size: clamp(2rem, 1.3rem + 2.8vw, 3.4rem); line-height: 1.1; max-width: none;
+}
+.poster-tag em { font-style: italic; }
+.poster-copy {
+  margin-top: 1.4rem; max-width: 60ch;
+  font-family: var(--font-label); font-weight: 300; font-size: 1rem; line-height: 1.65;
+  color: var(--night-ink); text-wrap: pretty;
+}
+.poster-grid {
+  margin-top: clamp(2.5rem, 5vw, 3.75rem);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2.5rem, 6vw, 5rem); align-items: start;
+}
+.poster-grid > * { min-width: 0; }
+.poster-when p { margin: 0; font-family: var(--font-label); font-weight: 300; text-transform: uppercase; line-height: 1; }
+.pw-day { font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem); color: var(--night-ink); }
+.pw-month { font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem); color: var(--sun); margin-top: 0.15em !important; }
+.pw-num {
+  font-weight: 200 !important; color: var(--sun);
+  font-size: clamp(7rem, 4rem + 12vw, 11.5rem); line-height: 0.82 !important;
+  letter-spacing: -0.04em; margin: 0.08em 0 0.1em -0.06em !important;
+  font-variant-numeric: lining-nums;
+}
+.pw-year { font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem); color: var(--sun); }
+.pw-time { font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem); color: var(--night-ink); margin-top: 0.15em !important; }
+.poster-reserve { display: flex; gap: 1.3rem; align-items: center; margin-top: 2.2rem; }
+.poster-reserve .qr { flex: none; width: 104px; }
+.poster-reserve .qr img { width: 100%; }
+.rsv-text p { font-family: var(--font-label); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.35; color: var(--night-ink); }
+.rsv-text strong { font-weight: 600; }
+.rsv-text .sun-text { color: var(--sun); }
+.rsv-text .scan { margin-top: 0.9rem; }
+.poster-when .ctas { margin-top: 1.8rem; }
+.poster-bill {
+  text-align: right;
+  padding-right: clamp(1.1rem, 2.5vw, 1.8rem);
+  border-right: 3px solid var(--poster-red);
+  display: grid; gap: 0;
+}
+.poster-bill p { margin: 0; }
+.pb-label { font-family: var(--font-label); font-size: 0.8rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--night-ink); }
+.pb-narrator { font-family: var(--font-display); color: var(--sun); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.3rem); line-height: 1.15; margin-top: 0.35rem !important; }
+.pb-cast { list-style: none; margin: 1.8rem 0 0; padding: 0; display: grid; gap: 0.35rem; }
+.pb-cast li {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  font-family: var(--font-label); font-weight: 300; font-size: 1.02rem; color: var(--night-ink);
+}
+.pb-cast li span:first-child { margin-left: auto; }
+.pb-cast li i { flex: 0 1 4.5rem; min-width: 1.5rem; border-bottom: 2px dotted var(--night-soft); transform: translateY(-0.25em); }
+.pb-cast li span:last-child { min-width: 4.6rem; text-align: left; }
+.pb-venue { font-family: var(--font-display); color: var(--sun); font-size: 1.3rem; margin-top: 1.9rem !important; line-height: 1.25; }
+.pb-addr { font-family: var(--font-label); font-weight: 300; color: var(--night-ink); line-height: 1.45; }
+.pb-limited { font-family: var(--font-label); font-style: italic; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sun); font-size: 0.85rem; margin-top: 1.9rem !important; }
+.pb-close { font-family: var(--font-label); font-weight: 300; color: var(--night-ink); line-height: 1.45; font-size: 0.95rem; margin-top: 0.3rem !important; }
+.pb-close strong { font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+@media (max-width: 760px) {
+  .poster-grid { grid-template-columns: minmax(0, 1fr); }
+  .poster-bill { text-align: left; border-right: 0; border-left: 3px solid var(--poster-red); padding-right: 0; padding-left: 1.1rem; }
+  .pb-cast li span:first-child { margin-left: 0; }
+}
+@media (max-width: 420px) {
+  .poster-reserve .qr { width: 88px; }
+  .pb-cast li i { display: none; }
+  .pb-cast li span:last-child { min-width: 0; color: var(--night-soft); }
+}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free At Last? · November 20, 2026 at St. Peter’s, Fernandina Beach">
@@ -564,30 +640,56 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
 </div>
 
 <main>
-  <header class="hero paper">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="presenter">St. Peter’s Episcopal Church presents</p>
-        <h1>
-          <img src="img/free-at-last-logo.webp" width="1200" height="974" fetchpriority="high" alt="Free At Last? The Evolution of the American Spiritual. Narration by Dr. Johnnetta Betsch Cole, featuring Ritz Chamber Players.">
-        </h1>
-        <p class="campaign">Songs of faith. Voices of freedom.</p>
-        <div class="when">
-          <p class="date">Friday, November 20, 2026 <span class="time">· 7:00 p.m.</span></p>
-          <p class="venue">St. Peter’s Episcopal Church · 801 Atlantic Avenue · Fernandina Beach, Florida</p>
-        </div>
-        <div class="ctas">
-          <a class="btn btn-solid" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener">Reserve Your Seats <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-line" href="https://onrealm.org/StPetersEpiscop9300/give/freeatlast" target="_blank" rel="noopener">Support This Performance</a>
-        </div>
-        <p class="fine">Suggested donation of $20 per person. Seating is limited, and registration closes November 17th or when capacity is reached.</p>
-      </div>
-      <figure class="hero-photo">
-        <img src="img/cole-podium.jpg" width="1200" height="1800" fetchpriority="high" alt="Dr. Johnnetta Betsch Cole, in kente cloth and headwrap, narrates from a clear podium on the stage of Terry Concert Hall, with drums and a pianist behind her.">
-        <figcaption>Dr. Johnnetta Betsch Cole narrates <i>Free At Last?</i> at Terry Concert Hall, Jacksonville</figcaption>
-      </figure>
-    </div>
+  <header class="poster-top">
+    <h1>
+      <img src="img/poster-hero.webp" srcset="img/poster-hero-900.webp 900w, img/poster-hero.webp 1800w" sizes="(min-width: 1100px) 1100px, 100vw" width="1800" height="1330" fetchpriority="high" alt="St. Peter’s Episcopal Church presents Free At Last? The Evolution of the American Spiritual. Narration by Dr. Johnnetta Betsch Cole, featuring Ritz Chamber Players. Two hands rise before a golden sun, breaking a chain.">
+    </h1>
   </header>
+
+  <section class="poster-band night" aria-label="Performance details">
+    <div class="wrap">
+      <h2 class="poster-tag">Songs of Faith. <em>Voices of Freedom.</em></h2>
+      <p class="poster-copy">Born in bondage, the American spiritual gives voice to faith, resistance, and the pursuit of freedom. Music and spoken narrative trace its evolution through the lives of extraordinary Black women—from Harriet Tubman to Coretta Scott King—with Dr. Johnnetta Betsch Cole carrying the story into the present.</p>
+
+      <div class="poster-grid">
+        <div class="poster-when">
+          <p class="pw-day">Friday</p>
+          <p class="pw-month">November</p>
+          <p class="pw-num">20</p>
+          <p class="pw-year">2026</p>
+          <p class="pw-time">7:00 p.m.</p>
+          <div class="poster-reserve">
+            <a class="qr" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener"><img src="img/reserve-qr.png" width="281" height="293" alt="QR code linking to the reservation form"></a>
+            <div class="rsv-text">
+              <p>Reserve your seats</p>
+              <p><strong>Suggested donation</strong></p>
+              <p class="sun-text"><strong>$20 per person</strong></p>
+              <p class="scan">Scan to register</p>
+            </div>
+          </div>
+          <div class="ctas">
+            <a class="btn btn-solid" href="https://form.jotform.com/262915658265064" target="_blank" rel="noopener">Reserve Your Seats <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-line" href="https://onrealm.org/StPetersEpiscop9300/give/freeatlast" target="_blank" rel="noopener">Support This Performance</a>
+          </div>
+        </div>
+
+        <div class="poster-bill">
+          <p class="pb-label">Narration by</p>
+          <p class="pb-narrator">Dr. Johnnetta Betsch Cole</p>
+          <ul class="pb-cast">
+            <li><span>Alison Buchanan</span><i aria-hidden="true"></i><span>soprano</span></li>
+            <li><span>Robert Sims</span><i aria-hidden="true"></i><span>baritone</span></li>
+            <li><span>Ann Marie McPhail</span><i aria-hidden="true"></i><span>soprano</span></li>
+            <li><span>Artina McCain</span><i aria-hidden="true"></i><span>piano</span></li>
+          </ul>
+          <p class="pb-venue">St. Peter’s Episcopal Church</p>
+          <p class="pb-addr">801 Atlantic Avenue<br>Fernandina Beach, Florida</p>
+          <p class="pb-limited">Seating is limited</p>
+          <p class="pb-close">Registration closes<br><strong>November 17th</strong><br>or sooner if capacity is reached.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="cast paper-2" aria-label="Featuring">
     <div class="wrap">
