@@ -326,8 +326,10 @@ em, i { font-style: italic; }
   align-items: start;
 }
 .narrator > * { min-width: 0; }
-.narrator .photo { grid-area: photo; }
+.narrator > .photo { grid-area: photo; }
 .narrator .ledger { grid-area: ledger; }
+.narrator-stage { margin-top: 0.6rem; margin-right: clamp(10px, 1.3vw, 18px); }
+.narrator-stage img { aspect-ratio: 3 / 2; object-position: 30% 50%; }
 .narrator .narrator-text { grid-area: text; display: grid; gap: 1.6rem; align-content: start; }
 .narrator-name { font-size: clamp(2.4rem, 1.5rem + 3.2vw, 4.2rem); }
 .narrator-role { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; color: var(--ink-soft); margin-top: 0.4rem; }
@@ -760,6 +762,10 @@ footer.night { padding-block: clamp(56px, 8vw, 96px) clamp(40px, 6vw, 64px); }
             <p>Her connection to Northeast Florida includes a family history of advocacy for Black life and culture. Her sister, MaVynee Betsch, was an opera singer who became the environmental advocate known as the Beach Lady of American Beach.</p>
             <p>As narrator of <em>Free At Last?</em>, Dr. Cole brings her scholarship and her commitment to cultural understanding to a program that invites audiences to hear these songs as expressions of faith, endurance, and the continuing pursuit of freedom. On November 20th, she shares it with her own parish, St. Peter’s.</p>
           </div>
+          <figure class="photo framed narrator-stage">
+            <img src="img/cole-narrates-terry.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Seen from above, Dr. Johnnetta Betsch Cole, in kente cloth and headwrap, narrates from a clear Jacksonville University podium, with djembe and conga drums and a grand piano set across the stage.">
+            <figcaption>Dr. Johnnetta Betsch Cole narrates <i>Free At Last?</i> at Terry Concert Hall</figcaption>
+          </figure>
         </div>
         <aside class="ledger" aria-label="Milestones">
           <h3>A life of firsts</h3>
